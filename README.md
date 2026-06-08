@@ -197,14 +197,3 @@ This page acts as an interactive drill-down page for investigating detailed vari
 ![Variance Explorer](screenshots/05_variance_explorer.png)
 
 ---
-
-## Key DAX Measures
-
-The dashboard uses DAX measures for financial analysis, including:
-
-```DAX
-Actual Revenue = 
-CALCULATE (
-    SUM ( fact_actuals[actual_amount] ),
-    dim_category[category_type] = "Revenue"
-)
