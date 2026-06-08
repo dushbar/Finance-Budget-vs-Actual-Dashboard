@@ -46,15 +46,4 @@ ORDER BY [date];
 
 
 
-SELECT *
-FROM staging.dim_date
-WHERE date_key <> CONVERT(INT, FORMAT([date], 'yyyyMMdd'));
-
-
-
-ALTER TABLE staging.fact_budget
-ALTER COLUMN budget_amount DECIMAL(18,2) NOT NULL
-
-
-
 
