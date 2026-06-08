@@ -1,0 +1,6 @@
+region_id,region_name,region_weight
+1,North,1.2
+2,South,1.05
+3,East,0.9
+4,West,1.15
+5,Central,0.8

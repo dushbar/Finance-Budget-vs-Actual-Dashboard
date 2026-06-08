@@ -1,0 +1,12 @@
+category_id,category_name,account_type,category_group
+101,Product Revenue,Revenue,Revenue
+102,Service Revenue,Revenue,Revenue
+103,Subscription Revenue,Revenue,Revenue
+201,Salary,Expense,People Cost
+202,Software,Expense,Technology
+203,Rent,Expense,Facilities
+204,Marketing Spend,Expense,Growth
+205,Travel,Expense,Operations
+206,Utilities,Expense,Facilities
+207,Training,Expense,People Cost
+208,Consulting,Expense,Professional Services

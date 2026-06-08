@@ -1,0 +1,8 @@
+department_id,department_name,department_group
+1,Sales,Commercial
+2,Marketing,Commercial
+3,Operations,Operations
+4,Finance,Corporate
+5,HR,Corporate
+6,IT,Corporate
+7,Customer Support,Operations
