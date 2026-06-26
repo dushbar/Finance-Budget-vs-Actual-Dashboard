@@ -1,5 +1,15 @@
 # Finance Budget vs Actual Dashboard
 
+[![Executive Finance Overview](screenshots/01_executive_finance_overview.png)](powerbi/BudgetvsActual.pdf)
+
+> **[📄 View the full multi-page report (PDF)](powerbi/BudgetvsActual.pdf)** &nbsp;|&nbsp; Open `powerbi/BudgetvsActual.pbix` in Power BI Desktop to interact with all five pages.
+
+| Variance Deep Dive | Department Accountability | Regional & Category | Variance Explorer |
+|:---:|:---:|:---:|:---:|
+| [![Budget Variance Deep Dive](screenshots/02_budget_variance_deep_dive.png)](screenshots/02_budget_variance_deep_dive.png) | [![Department Performance](screenshots/03_department_performance.png)](screenshots/03_department_performance.png) | [![Regional and Category Performance](screenshots/04_regional_category_performance.png)](screenshots/04_regional_category_performance.png) | [![Variance Explorer](screenshots/05_variance_explorer.png)](screenshots/05_variance_explorer.png) |
+
+> ℹ️ *The dataset is fully synthetic, generated in Python to mirror realistic FP&A patterns (seasonality, salary inflation, departmental cost structures, and controlled budget variance). It contains no real or proprietary financial data.*
+
 ## Project Overview
 
 This project is an end-to-end Finance Budget vs Actual Dashboard built using Python, SQL Server, Power BI, and DAX.
@@ -229,3 +239,30 @@ This page acts as an interactive drill-down page for investigating detailed vari
 ## How to Use
 
 Review the SQL scripts (`sql/`), the dataset generator (`scripts/`), the Power BI file (`powerbi/`), and the page screenshots (`screenshots/`). Open the `.pbix` in Power BI Desktop to interact with slicers, drill-downs, and cross-filtering across all five pages.
+
+---
+
+## Repository Structure
+
+```text
+Finance-Budget-vs-Actual-Dashboard/
+├── README.md
+├── data/
+│   └── raw/                       # Generated CSVs (clean + dirty fact tables, dimensions)
+├── scripts/
+│   └── generate_finance_dataset.py   # Python synthetic data generator
+├── sql/
+│   ├── 01_create_database_and_schemas.sql
+│   ├── 02_validation_queries.sql
+│   └── 03_reporting_views.sql        # finance.* views consumed by Power BI
+├── powerbi/
+│   ├── BudgetvsActual.pbix           # Power BI report
+│   └── BudgetvsActual.pdf            # Full multi-page report export
+├── screenshots/
+│   ├── 01_executive_finance_overview.png
+│   ├── 02_budget_variance_deep_dive.png
+│   ├── 03_department_performance.png
+│   ├── 04_regional_category_performance.png
+│   └── 05_variance_explorer.png
+└── icons/                         # Navigation icons used in the report
+```
