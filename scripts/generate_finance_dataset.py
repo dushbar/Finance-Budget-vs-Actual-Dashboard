@@ -184,7 +184,17 @@ def create_budget(
         "Customer Support": ["Salary", "Software", "Rent", "Utilities", "Training"],
     }
 
-    revenue_departments = ["Sales", "Customer Support"]
+    # Revenue is now earned by multiple commercial/operational departments,
+    # not just Sales. Finance and HR remain pure cost centers (realistic).
+    # Weights are relative revenue contribution per department.
+    department_revenue_weight = {
+        "Sales": 0.80,
+        "Marketing": 0.38,
+        "Operations": 0.30,
+        "IT": 0.20,
+        "Customer Support": 0.15,
+    }
+    revenue_departments = list(department_revenue_weight.keys())
 
     # Month seasonality
     # Higher revenue in March, October, November, December.
@@ -250,7 +260,7 @@ def create_budget(
                     if department_name not in revenue_departments:
                         continue
 
-                    dept_revenue_weight = 1.00 if department_name == "Sales" else 0.22
+                    dept_revenue_weight = department_revenue_weight[department_name]
 
                     base = revenue_base[category_name]
                     budget_amount = (
